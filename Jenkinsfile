@@ -2,6 +2,10 @@
 pipeline {
     agent any
 
+        tools {
+    nodejs "nodejs"
+}
+
 
 
     stages {
@@ -13,9 +17,7 @@ pipeline {
             }
         }
 
-    tools {
-    nodejs "nodejs"
-}
+
         
         stage('Run the App') {
             steps {
